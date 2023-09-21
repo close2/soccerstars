@@ -1,0 +1,728 @@
+/*
+Theme Name: Soccerstars
+Theme URI: http://wordpress.org/
+Description: soccerstars template by davidgtoran
+Author: davidgtoran
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags: football, blue, sky, grey, white
+*/
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+
+body {
+	background: #0174ad;
+	color: #3a3a3a;
+	font: 400 14px/1.6 'Droid Sans', Arial, sans-serif;
+	text-align: left;
+}
+
+/* ******************************
+	GENERAL
+****************************** */
+
+::selection {
+	background:#cc0000;
+	color:#fff;
+	text-shadow:;
+}
+
+::-moz-selection {
+	background:#cc0000;
+	color:#fff;
+	text-shadow:;
+}
+
+::-webkit-selection {
+	background:#cc0000;
+	color:#fff;
+	text-shadow:;
+}
+
+.alignleft {
+	float: left;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+
+.alignright {
+	float: right;
+	padding-left: 15px;
+	padding-bottom: 15px;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* ******************************
+	LINKS
+****************************** */
+
+a {
+	text-decoration: none;
+	color: #004d74;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #004d74;
+}
+
+a.readon {
+	display: block;
+	padding: 5px 0;
+}
+
+/* ******************************
+	TYPO
+****************************** */
+
+h1 {
+	color: #004d74;
+	font: 700 22px/1.6 'Droid Sans', Arial, sans-serif;
+	margin-bottom: 5px;
+}
+
+h2, h2 a {
+	color: #004d74;
+	font: 700 16px/1.6 'Droid Sans', Arial, sans-serif;
+	margin-bottom: 2px;
+}
+
+h3 {
+	color: #004d74;
+	font: 700 16px/1.6 'Droid Sans', Arial, sans-serif;
+	margin-bottom: 15px;
+}
+
+h4 {
+	font: 700 16px/1.6 'Droid Sans', Arial, sans-serif;
+	margin-top: 15px;
+}
+
+h5 {
+	font:;
+	color:;
+}
+
+h6 {
+	font:;
+	color:;
+}
+
+/* ******************************
+	HEADER
+****************************** */
+
+header {
+	background: url(images/headerbg.jpg) repeat-x;
+	width: 100%;
+	height: 225px;
+	margin-top: 25px;
+}
+
+#logo {
+	float: left;
+	background: url(https://www.soccerstars.at/wp-content/themes/soccerstars/images/logo.png) no-repeat;
+	width: 220px;
+	height: 225px;
+	position: relative;
+	left: 10px;
+}
+
+#logo h1 a {
+	position: absolute;
+	width: 220px;
+	height: 225px;
+	text-indent: -99999px;
+}
+
+/* ******************************
+	MENU
+****************************** */
+
+nav {
+	width: 700px;
+	height: 50px;
+	position: relative;
+	top: 110px;
+	float: right;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	float: left;
+	position: relative;
+}
+
+nav ul li a {
+	display: block;
+	padding: 10px;
+	text-transform: uppercase;
+	font: 700 16px/1.6 'Droid Sans', Arial, sans-serif;
+	color: #fff;
+	text-shadow: #004d74 1px 2px 1px
+}
+
+nav ul li a:hover {
+	color: #004d74;
+	text-shadow: #077fbb 0px 1px 1px;
+	-webkit-transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	-moz-transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	-0-transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	text-decoration: none;
+}
+
+nav ul li.current_page_item a {
+	color: #003e5d;
+	text-shadow: #077fbb 0px 1px 1px;
+	-webkit-transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	-moz-transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	-0-transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+}
+
+nav ul li a:active {
+	color: #fff;
+	text-shadow: #004d74 0px 1px 1px;
+	-webkit-transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	-moz-transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	-0-transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+	transition: color 0.2s ease-in, text-shadow 0.2s ease-in;
+}
+
+nav ul li ul {
+    display: none;
+}
+ 
+nav ul li:hover ul {
+	padding-top: 7px;
+    display: block;
+    position: absolute;
+    top: 40px;
+    min-width: 200px;
+    left: 0;
+    margin-top: -1px;
+    z-index: 9999;
+}
+
+nav ul li:hover ul li a {
+    display: block;
+    background: #005e8d;
+    color: #3fa8dd;
+	text-shadow: none;
+	font: 700 14px/1.6 'Droid Sans', Arial, sans-serif;
+    width: 210px;
+	border-top: 1px solid #0687c7;
+    border-bottom: 1px solid #004567;
+
+	-webkit-box-shadow: 0px 2px 4px 0px #444;
+	-moz-box-shadow: 0px 2px 4px 0px #444;
+	box-shadow: 0px 2px 4px 0px #444;
+}
+
+nav ul li:hover ul li a:hover {
+    background: #006191;
+    color: #fff;
+}
+
+nav ul li:hover ul li a:active {
+    background: #005078;
+    color: #fff;
+}
+
+nav ul li:hover ul li:first-child a {
+	border-top: none; !important
+}
+
+nav ul li:hover ul li:last-child a {
+	-webkit-border-radius: 0 0 3px 3px;
+	-moz-border-radius: 0 0 3px 3px;
+	border-radius: 0 0 3px 3px;
+}
+
+/* ******************************
+	GRID
+****************************** */
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+	display: inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.grid_1 {
+	width: 60px;
+}
+
+.grid_2 {
+	width: 140px;
+}
+
+.grid_3 {
+	width: 220px;
+}
+
+.grid_4 {
+	width: 300px;
+}
+
+.grid_5 {
+	width: 380px;
+}
+
+.grid_6 {
+	width: 460px;
+}
+
+.grid_7 {
+	width: 540px;
+}
+
+.grid_8 {
+	width: 620px;
+}
+
+.grid_9 {
+	width: 700px;
+}
+
+.grid_10 {
+	width: 780px;
+}
+
+.grid_11 {
+	width: 860px
+}
+
+.grid_12 {
+	width: 940px;
+}
+
+/* ******************************
+	CONTENT
+****************************** */
+
+.index {
+	background: #fff;
+	width: 940px;
+	margin-top: -35px;
+	padding-top: 50px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.content {
+	background: #fff;
+	width: 925px;
+	margin-top: -35px;
+	padding-top: 50px;
+	padding-left: 15px;
+	padding-bottom: 15px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.postings {
+	width: 600px;
+	float: left;
+}
+
+.entry {
+	width: 600px;
+	padding: 15px 0 15px 0;
+	margin: 15px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.entry span {
+	color: #888;
+	display: block;
+	margin-top: -3px;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+.kader {
+	float: left;
+}
+
+.kader ul {
+	list-style-type: none;
+}
+
+.spieler {
+	float: left;
+}
+
+td.bildlinks {
+	width: 320px;
+}
+
+td.bildrechts {
+}
+
+td.infolinks {
+	font-weight: 700;
+	width: 250px;
+	padding: 3px 0;
+}
+
+td.inforechts {
+	padding: 3px 0;
+}
+
+section {
+}
+
+article {
+}
+
+/* ******************************
+	SIDEBAR
+****************************** */
+
+aside {
+	background: #f9f9f9;
+	width: 280px;
+	float: right;
+	padding: 10px;
+}
+
+aside ul li {
+	list-style-type: none;
+}
+
+li.widget-container {
+	display: block;
+	margin-bottom: 25px;
+}
+
+li.widget_tag_cloud {
+	display: block;
+	margin-top: 25px;
+}
+
+li.cat-item a {
+	float: left;
+	background: #004d74;
+	color: #fff;
+	padding: 5px 12px;
+	margin-right: 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/* ******************************
+	FOOTER
+****************************** */
+
+footer {
+	background: #252525;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+	margin-top: 35px;
+	padding: 35px 0;
+}
+
+footer ul {
+	list-style-type: none;
+}
+
+footer ul li {
+}
+
+footer ul li a {
+	display: block;
+	color: #ccc;
+	padding: 5px 0;
+}
+
+footer ul li a:hover {
+	color: #fff;
+}
+
+.footercol {}
+
+.ngg-widget a {
+	float: left;
+	margin-right: 20px;
+}
+
+/* ******************************
+	FORM
+****************************** */
+
+form {
+}
+
+input[type=text] {
+	display: block;
+	background: #fff;
+	color: #b2b2b2;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #eee;
+	width: 300px;
+	padding: 7px;
+	outline: none;
+	margin-bottom: 15px;
+}
+
+input[type=text]:hover, textarea:hover {
+	border: 1px solid #ddd;
+	color: #3a3a3a;
+}
+
+input[type=text]:active, input[type=text]:focus, textarea:active, textarea:focus {
+	background: #fffee0;
+	color: #3a3a3a;
+}
+
+textarea {
+	display: block;
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #eee;
+	width: 450px;
+	height: 150px;
+	padding: 7px;
+	outline: none;
+	margin-bottom: 15px;
+}
+
+input[type=submit] {
+	display: block;
+	background: #005e8d;
+	color: #fff;
+	text-transform: uppercase;
+	font: 700 14px/1.6 'Droid Sans', Arial, sans-serif;
+	padding: 5px 15px;
+	text-align: center;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background: #00679b;
+	color: #fff;
+}
+
+input[type=submit]:active {
+	background: #005179;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * jQuery Nivo Slider v2.7.1
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010
+ */
+ 
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+    position:relative;
+    width: 900px; /* Change this to your images width */
+    height: 450px; /* Change this to your images height */
+    background:url(http://davidgtoran.at/projects/soccerstars/wp-content/themes/soccerstars/js/nivo-slider/themes/default/loading.gif) no-repeat 50% 50%;
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.nivoSlider a {
+    border:0;
+    display:block;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	opacity:0.8; /* Overridden by captionOpacity setting */
+	width:100%;
+	z-index:8;
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+-webkit-border-radius: ;
+-moz-border-radius: ;
+border-radius: ;
+
+background: rgb(252,230,166); 
+background: -moz-linear-gradient(top,  rgba(252,230,166,1) 0%, rgba(254,191,1,1) 100%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,230,166,1)), color-stop(100%,rgba(254,191,1,1))); 
+background: -webkit-linear-gradient(top,  rgba(252,230,166,1) 0%,rgba(254,191,1,1) 100%);
+background: -o-linear-gradient(top,  rgba(252,230,166,1) 0%,rgba(254,191,1,1) 100%); 
+background: -ms-linear-gradient(top,  rgba(252,230,166,1) 0%,rgba(254,191,1,1) 100%); 
+background: linear-gradient(top,  rgba(252,230,166,1) 0%,rgba(254,191,1,1) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fce6a6', endColorstr='#febf01',GradientType=0 ); 
+
+-webkit-box-shadow: 1px 1px 1px 1px #000;
+-moz-box-shadow: 1px 1px 1px 1px #000;
+box-shadow: 1px 1px 1px 1px #000;
+
+text-shadow: 1px 1px 1px #000000;
+filter: dropshadow(color=#000000, offx=1, offy=1);
+
+-moz-column-count: 2;
+-moz-column-gap: 20px;
+-webkit-column-count: 2;
+-webkit-column-gap: 20px;
+column-count: 2;
+column-gap: 20px;
+
+-webkit-transition: all 2s ease-in;
+-moz-transition: all 2s ease-in;
+-ms-transition: all 2s ease-in;
+-o-transition: all 2s ease-in;
+transition: all 2s ease-in;
+
+-moz-transform: scale(1) rotate(12deg) translate(12px, 12px) skew(12deg, 12deg);
+-webkit-transform: scale(1) rotate(12deg) translate(12px, 12px) skew(12deg, 12deg);
+-o-transform: scale(1) rotate(12deg) translate(12px, 12px) skew(12deg, 12deg);
+-ms-transform: scale(1) rotate(12deg) translate(12px, 12px) skew(12deg, 12deg);
+transform: scale(1) rotate(12deg) translate(12px, 12px) skew(12deg, 12deg);        
+
+*/
